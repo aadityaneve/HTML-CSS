@@ -1,0 +1,144 @@
+<!-- Problem
+You can't use any style tags for any of the html tags and you have to use classes, ids to apply the styles, keep the usage of ids to minimal and optimize the usage of classes by using multiple classes . Also use percentages(%) so that layout looks decent in most screen sizes
+Create a file called the_hindu.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/news_paper_lg.png -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hindu</title>
+    <style>
+
+        body{
+            background-color: black;
+        }        
+
+        .mainDiv {
+            background-color: #EEEEEE;           
+            height: 500px;
+            width: 1024px;
+            margin:  10% auto;
+            font-family: sans-serif;
+        }
+
+        .leftPanel {
+            display: inline-block;
+            width: 49%;
+            padding: 0.5%;
+        }
+
+        .rightPanel {
+            display: inline-block;
+            width: 49%;
+            padding: 0.2%;
+        }
+
+        .bigCard {
+            height: 370px;
+            width: 100%;
+            background-color: #3949AB;
+            color: white;
+            font-size: 14px;
+        }
+
+        .smallCard {
+            height: 250;
+            width: 98.2%;
+            margin-top: 1%;
+            padding: 1%;
+            background-color: white;
+        }
+
+        .bigCardImg {
+            height: 60%;
+            width: 100%;
+        }
+
+        .bigCardInfo {
+            width: 100%;
+            padding: 1%;
+        }
+
+        .smallCardImg {
+            height: 100%;
+            width: 30%;
+        }        
+
+        .smallCardInfo {
+            display: inline-block;
+            width: 69%;
+        }
+
+        p {
+            margin: 0%;
+        }
+
+        h3 {
+            margin: 0%;
+        }
+
+        h4 {
+            margin-bottom: 7px;
+        }
+
+                
+    </style>
+</head>
+<body>
+    <div class="mainDiv">
+
+        <div class="leftPanel">
+            <div class="bigCard">
+                <img class="bigCardImg" src="https://th.thgim.com/news/national/fwrz7q/article30897008.ece/ALTERNATES/FREE_660/TH24Trump-visit1" alt="Ahmedabad joint rally with Trump">
+                <div class="bigCardInfo">
+                    <h2>Ahmedabad joint rally with Trumph will be historic, says Modi</h2>
+                    <h4>KALLOL BHATTACHERJEE <br> SUHASINI HAIDAR</h4>
+                    <p>U.S President to visit Sabarmati Ashram ahead of 'Namaste Trump' event</p>
+                </div>
+            </div>
+            <div class="smallCard">
+                <img class="smallCardImg" src="https://th.thgim.com/news/national/pk9een/article30897042.ece/ALTERNATES/FREE_660/TH24GUJSTADIUM" alt="Ahmedabad glitters to Welcome Donald Trump">
+                <div class="smallCardInfo">
+                    <h3 class="">NATIONAL</h3>
+                    <p class="">Ahmedabad glitters to Welcome Donald Trump</p>
+                </div>                
+            </div>
+        </div>
+
+        <div class="rightPanel">
+            <div class="smallCard">
+                <img class="smallCardImg" src="https://th.thgim.com/the-huddle/41kx3p/article30895692.ece/ALTERNATES/FREE_660/23THRANIL1" alt="THE HUDDLE">
+                <div class="smallCardInfo">
+                    <h3>THE HUDDLE</h3>
+                    <p>The Huddle 2020 | Regional integration pegged to SAARC revival, says Ranil Wickremesinghe</p>
+                </div>                
+            </div>
+            <div class="smallCard">
+                <img class="smallCardImg" src="https://www.thehindu.com/news/national/s9xcef/article30896383.ece/ALTERNATES/LANDSCAPE_615/23THLTKASHMIRCLASSROOM" alt="NATIONAL">
+                <div class="smallCardInfo">
+                    <h3>NATIONAL</h3>
+                    <p>Over 10 lakh Kashmir students to don school uniforms after seven months</p>
+                </div>                
+            </div>
+            <div class="smallCard">
+                <img class="smallCardImg" src="https://aniportalimages.s3.amazonaws.com/media/details/raveesh_kumar_feb23.JPG" alt="NATIONAL">
+                <div class="smallCardInfo">
+                    <h3>NATIONAL</h3>
+                    <p>Some restrictions imposed on export of medical equipment to China, says MEA</p>               
+                </div>                
+            </div>
+            <div class="smallCard">
+                <img class="smallCardImg" src="https://www.thehindu.com/the-huddle/fxfx2e/article30896395.ece/ALTERNATES/LANDSCAPE_1200/TH24MPS" alt="THE HUDDLE">
+                <div class="smallCardInfo">
+                    <h3>THE HUDDLE</h3>
+                    <p>Only a "a microscopic minority" protesting against CAA: Tejaswi Surya</p>
+                </div>                
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

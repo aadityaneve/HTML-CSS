@@ -1,0 +1,96 @@
+<!-- Problem
+Build the given layout using flex and flex-grow
+
+Create a file called zigzag.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/flex_2.jpg -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig Zag</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: whitesmoke;
+            width: 900px;
+            margin: 3% auto;
+            padding: 8%;
+        }
+
+        #container > div:nth-child(1) {
+            display: flex;
+        }
+        #container > div:nth-child(1) > div {
+            background-color: teal;
+            flex-basis: 50%;
+            height: 130px;
+            margin: 2% 3%;
+            border-radius: 3%;
+        }
+        #container > div:nth-child(1) > div:nth-child(1), #container > div:nth-child(1) > div:nth-child(3) {
+            flex-basis: 15%;
+        }
+
+
+        #container > div:nth-child(2) {
+            display: flex;
+        }
+        #container > div:nth-child(2) > div {
+            background-color: teal;
+            flex-basis: 50%;
+            height: 130px;
+            margin: 2% 3%;
+            border-radius: 3%;
+        }
+        #container > div:nth-child(2) > div:nth-child(2), #container > div:nth-child(2) > div:nth-child(3) {
+            flex-basis: 15%;
+        }
+
+
+        #container > div:nth-child(3) {
+            display: flex;
+        }
+        #container > div:nth-child(3) > div {
+            background-color: teal;
+            flex-basis: 50%;
+            height: 130px;
+            margin: 2% 3%;
+            border-radius: 3%;
+        }
+        #container > div:nth-child(3) > div:nth-child(1), #container > div:nth-child(3) > div:nth-child(2) {
+            flex-basis: 15%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>      
+
+    </div>
+    
+</body>
+</html>

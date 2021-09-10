@@ -1,0 +1,190 @@
+<!-- Problem
+You can't use any style tags for any of the html tags and you have to use classes and ids to apply the styles, keep the usage of ids to minimal and optimize the usage of classes by using multiple classes
+You can't use tables to achieve the pricing tables, also use combinators to the maximum to achieve the desired layout
+
+Create a file called instamojo_pricing.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/html/websites/instamojo_pricing.png
+Link for the logo https://www.masaischool.com/static/img/logo.svg -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing</title>
+    <style>
+
+        * {
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: #FAFAFA;
+            height: 730px;
+            width: 1024px;
+            margin: 3% auto;
+        }
+        
+        #container div {
+            /* border: 1px solid green; */
+        }
+
+        #container > div > h1 {
+            padding-top: 2%;
+        }
+
+        #container > div > h1,p {
+            text-align: center;
+        }
+
+        #container > div > h1 {
+            color: #283593;
+        }
+
+        #container > div > p {
+            color: #303F9F;
+        }
+
+        #container > div:nth-child(1) > div {
+            background-color: white;
+            width: 90%;
+            margin: 4% auto;
+        }
+
+        #container > div:nth-child(1) > div > div {
+            display: inline-block;
+            width: 24.4%;
+        }
+
+        #container > div:nth-child(1) > div > div > div {
+            padding: 4%;
+        }
+
+        #container > div:nth-child(1) > div > div > div:nth-child(1) {
+            color: gray;
+        }
+
+        #container > div:nth-child(1) > div > div:nth-child(2) > div:nth-child(1) > img {
+            width: 29%;
+        }
+
+        div.fontColor {
+            color: red;
+        }
+
+        #container > div:nth-child(2) {
+            background-color: white;
+        }
+
+        #container > div:nth-child(2) > div {
+            width: 95%;
+            margin: 4% auto;
+        }
+
+        #container > div:nth-child(2) > div > div {
+            display: inline-block;
+            width: 24.4%;
+        }
+
+        #container > div:nth-child(2) > div > div > div {
+            padding: 4%;
+        }
+
+        #container > div:nth-child(2) > div > div > div:nth-child(1) {
+            color: gray;
+        }
+
+        #container > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(1) > img {
+            width: 29%;
+        }
+
+
+        #container hr {
+            background-color: #283593;
+            width: 10%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <!-- top div -->
+        <div>
+            <h1>Compare Pricing</h1>
+            <hr>
+            <p>Instamojo's overall costs compared to other modern platforms & traditional gateways.</p>
+            <div>
+                <div>
+                    <div>FEES & OTHER CHARGES</div>
+                    <div>Setup Fee</div>
+                    <div>Annual Maintenance</div>
+                    <div>Minimum Commitment</div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://www.masaischool.com/static/img/logo.svg" alt="Logo">
+                    </div>
+                    <div class="fontColor">Free</div>
+                    <div class="fontColor">Free</div>
+                    <div class="fontColor">No Commitment</div>
+                </div>
+                <div>
+                    <div>MODERN PLATFORMS</div>
+                    <div>₹0 to ₹10,000 / year</div>
+                    <div>₹10,000 to ₹25,000 / year</div>
+                    <div>Varies</div>
+                </div>
+                <div>
+                    <div>TRADITIONAL GATEWAYS</div>
+                    <div>₹25,000 / year</div>
+                    <div>₹10,000 to ₹25,000 / year</div>
+                    <div>Upto ₹1,00,00 / month</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom div -->
+        <div>
+            <h1>No Hidden Cost</h1>
+            <hr>
+            <p>Cost of time and effort spent increases hidden costs. But not on Instamojo.</p>
+            <div>
+                <div>
+                    <div>COST</div>
+                    <div>Time to Get Started</div>
+                    <div>Developer Cost for Integration</div>
+                    <div>Legal Costs of Agreements</div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://www.masaischool.com/static/img/logo.svg" alt="Logo">
+                    </div>
+                    <div class="fontColor">3-5 minutes</div>
+                    <div class="fontColor">Not Needed</div>
+                    <div class="fontColor">Not Needed</div>                    
+                </div>
+                <div>
+                    <div>MODERN PLATFORMS</div>
+                    <div>1-4 weeks</div>
+                    <div>₹1 Lakh+</div>
+                    <div>Varies</div>
+                </div>
+                <div>
+                    <div>TRADITIONAL GATEWAYS</div>
+                    <div>4-8 weeks</div>
+                    <div>₹1 Lakh+</div>
+                    <div>₹1 Lakh+</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

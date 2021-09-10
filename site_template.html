@@ -1,0 +1,70 @@
+<!-- Problem
+Build the given layout using grid and grid-templates
+
+Create a file called site_template.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/grid_2.jpg -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Left and Right Content</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: whitesmoke;
+            margin: 3% auto;
+            width: 1000px;
+            height: 700px;
+
+            padding: 2%;
+
+            display: grid;
+            gap: 30px;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 90px auto auto;
+        }
+
+        div.redBar {
+            background-color: red;
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-column-end: 4;
+            border-radius: 2%;
+        }
+        div.greenBar {
+            background-color: limegreen;
+            grid-column-start: 1;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            border-radius: 2%;
+        }
+        div.tealBar {
+            background-color: teal;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            border-radius: 2%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div class="redBar"></div>
+        <div class="greenBar"></div>
+        <div class="tealBar"></div>
+
+    </div>
+    
+</body>
+</html>

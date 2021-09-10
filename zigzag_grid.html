@@ -1,0 +1,107 @@
+<!-- Problem
+Build the given layout using grid and grid-area
+
+Create a file called zigzag_grid.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/grid_4.jpg -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zig Zag</title>
+    <style>
+
+        body {
+            background-color: black;
+            font-size: 50px;
+        }
+
+        #container {
+            background-color: whitesmoke;
+            width: 800px;
+            height: 600px;
+            margin: 2% auto;
+
+            padding: 5%;
+
+            display: grid;
+            gap: 40px;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        #container > div {
+            background-color: teal;
+            border-radius: 2%;
+        }
+
+        #container > div:nth-child(1) {
+            grid-row-start: 1;
+            grid-column-start: 1;
+        }
+
+        #container > div:nth-child(2) {
+            grid-row-start: 1;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        #container > div:nth-child(3) {
+            grid-row-start: 1;
+            grid-column-start: 4;
+        }
+
+        #container > div:nth-child(4) {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        #container > div:nth-child(5) {
+            grid-row-start: 2;
+            grid-column-start: 3;
+        }
+
+        #container > div:nth-child(6) {
+            grid-row-start: 2;
+            grid-column-start: 4;
+        }
+
+        #container > div:nth-child(7) {
+            grid-row-start: 3;
+            grid-column-start: 1;
+        }
+
+        #container > div:nth-child(8) {
+            grid-row-start: 3;
+            grid-column-start: 2;
+        }
+
+        #container > div:nth-child(9) {
+            grid-row-start: 3;
+            grid-column-start: 3;
+            grid-column-end: 5  ;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+
+</body>
+</html>

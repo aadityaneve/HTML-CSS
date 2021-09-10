@@ -1,0 +1,49 @@
+<!-- Problem
+Build the given layout using flex
+
+Create a file called flex_bars.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/flex_1.jpg -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Bars</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: whitesmoke;
+            width: 700px;
+            margin: 3% auto;
+            padding: 5%;
+            
+            display: flex;
+        }        
+
+        #container > div {
+            background-color: teal;
+            border-radius: 3%;
+            margin: 5% auto;
+            flex-basis: 17%;
+            height: 500px;            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

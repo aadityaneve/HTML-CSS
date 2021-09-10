@@ -1,0 +1,129 @@
+<!-- Problem
+You can't use any style tags for any of the html tags and you have to use classes and ids to apply the styles, keep the usage of ids to minimal and optimize the usage of classes by using multiple classes
+Use combinators to the maximum to achieve the desired layout
+
+Create a file called slack_culture.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/html/websites/slack_culture.png -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slack Culture</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        * {
+            color: 212121;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;    
+        }
+
+        #container  div {
+            /* border: 2px solid green; */
+            padding: 0.3%;
+        }
+
+        #container {
+            background-color: #EEEEEE;
+            height: 500px;
+            width: 800px;
+            margin: 7% auto;
+        }
+
+        #container > div:nth-child(1) {
+            width: 55%;
+            margin: auto;
+        }
+
+        #container > div:nth-child(2) {
+            width: 90%;
+            margin: auto;
+        }
+
+        #container > div:nth-child(2) > div {
+            display: inline-block;
+            width: 49%;
+        }
+
+        #container > div:nth-child(2) > div:nth-child(1) > div {
+            width: 99%;
+            padding: 1%;
+        }
+
+        #container > div:nth-child(2) > div:nth-child(2) > div {
+            width: 99%;
+            padding: 1%;
+        }
+
+        hr {
+            width: 60%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+
+        <div>
+            <h3>Working and thriving</h3>
+            <p>
+                We want people to thrive at Slack; we belive you do your best work when
+                you feel your best. Here are a just a few benefits we're proud to provide
+                our team with.
+            </p>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <h3>Learning & development</h3>
+                    <p>
+                        Receive an annual allowance for professional
+                        development, plus a monthly bonus you can Use
+                        towards anything. That means anything: a gym
+                        membership, your pet sitter, a new work look.
+                        Whatever matters most to you.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Parental leave</h3>
+                    <p>
+                        A lot of us have families, of all sorts of shapes
+                        and sizes, and we welcome each new addition
+                        with generous parental leave and "bonding leave".
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <h3>Health & Welness</h3>
+                    <p>
+                        Free medical, dental care and eye care for you
+                        and your family - Slack pays 100% of your premiums.                        
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Happier weekdays</h3>
+                    <p>
+                        A culture light on meetings (or that's our aim, at least)
+                        with guest speakers and opportunities to get to know your team
+                        better through events like weekly catered lunches and brekfasts,
+                        Thursday Socials and game nights. But we dont't stay in office
+                        24/7.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

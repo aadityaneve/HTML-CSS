@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        .main-div {
+            background-color: #EEEEEE;
+            /* border: 2px solid yellow; */
+            width: 1000px;
+            height: 800px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+
+            font-family: sans-serif;
+        }
+
+        .left-div {
+            /* border: 2px solid whitesmoke; */
+            display: inline-block;
+            margin: 70px auto;
+            padding: 60px;
+        }
+
+        .right-div {
+            /* border: 2px solid black; */
+            display: inline-block;
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px;
+            margin: 70px 10px 0 30px;
+            height: 615px;
+        }
+
+        .padding-top {
+            padding-top: 60px;
+        }
+
+        .padding-top-right {
+            padding: 15px 15px 2px 0px;
+        }
+        .padding-bottom-right {
+            padding: 0px 15px 15px 0px;
+        }
+        
+        input {
+            border: 3px solid black;
+            width: 320px;
+            height: 50px;
+        }
+
+        label {
+            display: block;
+            font-size: 40px;            
+        }
+
+        .simple-text {
+            color: red;
+            font-size: 25px;
+            padding: 15px;
+        }
+
+        .big-text {
+            font-size: 60px;
+        }
+
+        .register-button {
+            background-color: black;
+            color: whitesmoke;
+            text-align: center;
+            padding: 4px;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    
+    <div class="main-div">
+
+        <div class="left-div">
+            <div class="form">
+                <label>Name</label>
+                <input type="text">
+                <label>Email</label>
+                <input type="text">
+                <label>Mobile</label>
+                <input type="text">
+            </div>
+            <div class="simple-text">
+                Enter a valid mobile
+            </div>
+            <div class="register-button">
+                <label>REGISTER</label>
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="line-one padding-top">
+                <label class="padding-top-right">NAME</label>
+                <label class="big-text padding-bottom-right">MASAI</label>
+            </div>
+            <div class="line-two">
+                <label class="margin-auto padding-top-right">EMAIL</label>
+                <label class="padding-bottom-right">email@masaischool.com</label>
+            </div>
+            <div class="line-three">
+                <label class="margin-auto padding-top-right">MOBILE</label>
+                <label class="padding-bottom-right">9876543210</label>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

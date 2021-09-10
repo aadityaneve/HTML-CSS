@@ -1,0 +1,179 @@
+<!-- Problem
+You can't use any style tags for any of the html tags and you have to use classes, ids and combinators to apply the styles, keep the usage of ids to minimal and optimize the usage of classes by using multiple classes and combinators. Also use percentages(%) so that layout looks decent in most screen sizes
+Create a file called yummly.html
+The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/html_food.png -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        .mainDiv {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: whitesmoke;
+            /* border: 2px solid green; */
+            height: 800px;
+            width: 1024px;
+            /* display: inline-block;     */
+            margin: 2% 20%;
+        }
+
+        .card {
+            /* border: 2px solid yellow; */
+            display: inline-block;
+            height: 30%;
+            width: 25%;
+            margin: 2% 3% 2% 4%;
+            vertical-align: top;
+        }
+
+        .cardImg {
+            height: 100%;
+            width: 100%;
+        }
+
+        .cardInfo {
+            display: inline-block;
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .inlineBlock {
+            display: inline-block;
+        }
+
+        .leftPanel {
+            display: inline-block;
+            width: 68%;
+        }
+        .rightPanel {
+            display: inline-block;
+            text-align: right;
+            width: 30%;
+        }       
+
+        .faintText {
+            color: #E0E0E0;
+        }
+        .darkText {
+            color: #757575;
+        }
+
+        .marginForCardLogo {
+            margin: 3% auto;
+        }
+
+        .marginForDishName {
+            margin: 3% 0%;
+        }
+
+        .cardLogo {
+            width: 50%;
+            margin-bottom: 25%;
+            border-radius: 50%;
+        }
+
+        .topHeading {
+            text-align: center;
+        }
+
+        .extraMargin {
+            margin-top: 7%;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="mainDiv">
+        <h3 class="topHeading">Weeknight Dinners</h3>
+        <div class="card">
+            <img class="cardImg" src="https://lh3.googleusercontent.com/L8RbooGYp_gQGyEnxQU-vyXiVlNv2P05hYS-j3viudE08OSxQ_ashxwrm8mjHX2ziJhr95M_HBatVFlerZix=w1920-h1920-c-rj-v1-e365" alt="Dish image">            
+            <div class="cardInfo">
+                <div class="leftPanel">
+                    <h4 class="marginForDishName darkText">Sheet Pan Honey Mustard Pork Chops with Roasted Veggies</h4>
+                    <h5 class="faintText marginForCardLogo"><strong>YUMMLY</strong></h5>
+                </div>                
+                <div class="rightPanel">
+                    <img class="cardLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx-mA1ayfCJbFjPn-RwHeBY3JHoNHmIrZOVLt428lk94ladHTIGlPshu5HEalXUXVAEE&usqp=CAU" alt="YUM Logo">
+                </div>
+            </div>            
+        </div>  
+        <div class="card">
+            <img class="cardImg" src="https://lh3.googleusercontent.com/VPiiqjpOaDKkrssTIYrn_b-oyWa74Cj5Po1Hwiq4z8G_2eA0FY7kRTEj8biwNOFnWyeJM5H-bAt4Gh14H-NQzGk=w1920-h1920-c-rj-v1-e365" alt="Dish image">            
+            <div class="cardInfo">
+                <div class="leftPanel">
+                    <h4 class="marginForDishName darkText">Apricot Mustard Glazed Ham</h4>
+                    <h5 class="faintText marginForCardLogo"><strong>YUMMLY</strong></h5>
+                </div>                
+                <div class="rightPanel">
+                    <img class="cardLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx-mA1ayfCJbFjPn-RwHeBY3JHoNHmIrZOVLt428lk94ladHTIGlPshu5HEalXUXVAEE&usqp=CAU" alt="YUM Logo">
+                </div>
+            </div>            
+        </div>
+        <div class="card">
+            <img class="cardImg" src="https://lh3.googleusercontent.com/FtB-ySravjlDuxHMh7ocwYnwRLbjFiJThMWmMKpCFl6Kph-IhEZJRr7K-TSmWd0JL5t8s5ECi562xpuWI8rsMqs=w1920-h1920-c-rj-v1-e365" alt="Dish image">            
+            <div class="cardInfo">
+                <div class="leftPanel">
+                    <h4 class="marginForDishName darkText">Pork Milanese with Cacio e Pepe Spaghetti</h4>
+                    <h5 class="faintText marginForCardLogo"><strong>PORK</strong></h5>
+                </div>                
+                <div class="rightPanel">
+                    <img class="cardLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx-mA1ayfCJbFjPn-RwHeBY3JHoNHmIrZOVLt428lk94ladHTIGlPshu5HEalXUXVAEE&usqp=CAU" alt="YUM Logo">
+                </div>
+            </div>            
+        </div>
+
+        <h3 class="topHeading extraMargin">Popular Now</h3>
+
+        <div class="card">
+            <img class="cardImg" src="https://lh3.googleusercontent.com/7kO56of8W1_CkJ0994fp8bGt6ErHBLJM42VdbzF5UXJ8h7SeBuKKHyjYDg7E7uThYagY8ng5AUN6O8lzu06j=w1920-h1920-c-rj-v1-e365" alt="Dish image">            
+            <div class="cardInfo">
+                <div class="leftPanel">
+                    <h4 class="marginForDishName darkText">Brown Sugar Cookies</h4>
+                    <h5 class="faintText marginForCardLogo"><strong>YUMMLY</strong></h5>
+                </div>                
+                <div class="rightPanel">
+                    <img class="cardLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx-mA1ayfCJbFjPn-RwHeBY3JHoNHmIrZOVLt428lk94ladHTIGlPshu5HEalXUXVAEE&usqp=CAU" alt="YUM Logo">
+                </div>
+            </div>            
+        </div>
+        <div class="card">
+            <img class="cardImg" src="https://production-media.gousto.co.uk/cms/mood-image/517---Spinach--Veggie-Mince-Lasagne..jpg" alt="Dish image">            
+            <div class="cardInfo">
+                <div class="leftPanel">
+                    <h4 class="marginForDishName darkText">Vegan Spinach Lasagna</h4>
+                    <h5 class="faintText marginForCardLogo"><strong>YUMMLY</strong></h5>
+                </div>                
+                <div class="rightPanel">
+                    <img class="cardLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx-mA1ayfCJbFjPn-RwHeBY3JHoNHmIrZOVLt428lk94ladHTIGlPshu5HEalXUXVAEE&usqp=CAU" alt="YUM Logo">
+                </div>
+            </div>            
+        </div>
+        <div class="card">
+            <img class="cardImg" src="https://lh3.googleusercontent.com/T5Xyezyxo6HbrkSXLLCeDuC_2YUtT1E7wNJCV1xXElIB0vZ3Pt9GrQR2r8UKh37xNFWY-U7SyT7tGkoDJPDJ2Q=w1920-h1920-c-rj-v1-e365" alt="Dish image">            
+            <div class="cardInfo">
+                <div class="leftPanel">
+                    <h4 class="marginForDishName darkText">Easy Korean Sticky Chicken</h4>
+                    <h5 class="faintText marginForCardLogo"><strong>YUMMLY</strong></h5>
+                </div>                
+                <div class="rightPanel">
+                    <img class="cardLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFx-mA1ayfCJbFjPn-RwHeBY3JHoNHmIrZOVLt428lk94ladHTIGlPshu5HEalXUXVAEE&usqp=CAU" alt="YUM Logo">
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+</body>
+</html>

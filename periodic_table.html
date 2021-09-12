@@ -1,0 +1,845 @@
+<!-- Problem
+        Periodic Table (Selectors & Combinators) Pending
+
+        You can't use any style tags for any of the html tags and you have to use classes, ids and combinators to apply the styles, 
+        keep the usage of ids to minimal and optimise the usage of classes by using multiple classes and combinators
+
+        Use Box Model to build the layout
+
+        Create a file called periodic_table.html
+        The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/periodic_table.jpg
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Periodic Table</title>
+     <style>
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: darkslategrey;
+            width: 90%;
+            height: 500px;
+            margin: 3% auto;
+
+            padding: 2%;
+
+            display: grid;
+            gap: 2%;
+            grid-template: "box1   box2   box3   box4   box5   box6   box7   box8   box9   box10  box11  box12  box13  box14  box15  box16  box17  box18"
+                           "box19  box20  box21  box22  box23  box24  box25  box26  box27  box28  box29  box30  box31  box32  box33  box34  box35  box36"
+                           "box37  box38  box39  box40  box41  box42  box43  box44  box45  box46  box47  box48  box49  box50  box51  box52  box53  box54"
+                           "box55  box56  box57  box58  box59  box60  box61  box62  box63  box64  box65  box66  box67  box68  box69  box70  box71  box72"
+                           "box73  box74  box75  box76  box77  box78  box79  box80  box81  box82  box83  box84  box85  box86  box87  box88  box89  box90"
+                           "box91  box92  box93  box94  box95  box96  box97  box98  box99  box100 box101 box102 box103 box104 box105 box106 box107 box108"
+                           "box109 box110 box111 box112 box113 box114 box115 box116 box117 box118 box119 box120 box121 box122 box123 box124 box125 box126"
+                           "box127 box128 box129 box130 box131 box132 box133 box134 box135 box136 box137 box138 box139 box140 box141 box142 box143 box144";
+        }
+
+        #container > div {
+            width: 100%;
+            height: 100%;
+
+            padding: 10%;
+
+            color: black;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #container > div:nth-child(1) {            
+            grid-area: box1;
+        }
+        #container > div:nth-child(2) {            
+            grid-area: box2;
+        }
+        #container > div:nth-child(3) {            
+            grid-area: box3;
+        }
+        #container > div:nth-child(4) {            
+            grid-area: box4;
+        }
+        #container > div:nth-child(5) {            
+            grid-area: box5;
+        }
+        #container > div:nth-child(6) {            
+            grid-area: box6;
+        }
+        #container > div:nth-child(7) {            
+            grid-area: box7;
+        }
+        #container > div:nth-child(8) {            
+            grid-area: box8;
+        }
+        #container > div:nth-child(9) {            
+            grid-area: box9;
+        }
+        #container > div:nth-child(10) {            
+            grid-area: box10;
+        }
+        #container > div:nth-child(11) {            
+            grid-area: box11;
+        }
+        #container > div:nth-child(12) {            
+            grid-area: box12;
+        }
+        #container > div:nth-child(13) {            
+            grid-area: box13;
+        }
+        #container > div:nth-child(14) {            
+            grid-area: box14;
+        }
+        #container > div:nth-child(15) {            
+            grid-area: box15;
+        }
+        #container > div:nth-child(16) {            
+            grid-area: box16;
+        }
+        #container > div:nth-child(17) {            
+            grid-area: box17;
+        }
+        #container > div:nth-child(18) {            
+            grid-area: box18;
+        }
+        
+
+        #container > div:nth-child(19) {            
+            grid-area: box19;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(20) {            
+            grid-area: box20;
+        }
+        #container > div:nth-child(21) {            
+            grid-area: box21;
+        }
+        #container > div:nth-child(22) {            
+            grid-area: box22;
+        }
+        #container > div:nth-child(23) {            
+            grid-area: box23;
+        }
+        #container > div:nth-child(24) {            
+            grid-area: box24;
+        }
+        #container > div:nth-child(25) {            
+            grid-area: box25;
+        }
+        #container > div:nth-child(26) {            
+            grid-area: box26;
+        }
+        #container > div:nth-child(27) {            
+            grid-area: box27;
+        }
+        #container > div:nth-child(28) {            
+            grid-area: box28;
+        }
+        #container > div:nth-child(29) {            
+            grid-area: box29;
+        }
+        #container > div:nth-child(30) {            
+            grid-area: box30;
+        }
+        #container > div:nth-child(31) {            
+            grid-area: box31;
+        }
+        #container > div:nth-child(32) {            
+            grid-area: box32;
+        }
+        #container > div:nth-child(33) {            
+            grid-area: box33;
+        }
+        #container > div:nth-child(34) {            
+            grid-area: box34;
+        }
+        #container > div:nth-child(35) {            
+            grid-area: box35;
+        }
+        #container > div:nth-child(36) {            
+            grid-area: box36;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+
+
+        #container > div:nth-child(37) {            
+            grid-area: box37;
+            background-color: #664179;
+            border: 5px outset #664179;
+        }
+        #container > div:nth-child(38) {            
+            grid-area: box38;
+            background-color: #6D669D;
+            border: 5px outset #6D669D;
+        }
+        #container > div:nth-child(39) {            
+            grid-area: box39;
+        }
+        #container > div:nth-child(40) {            
+            grid-area: box40;
+        }
+        #container > div:nth-child(41) {            
+            grid-area: box41;
+        }
+        #container > div:nth-child(42) {            
+            grid-area: box42;
+        }
+        #container > div:nth-child(43) {            
+            grid-area: box43;
+        }
+        #container > div:nth-child(44) {            
+            grid-area: box44;
+        }
+        #container > div:nth-child(45) {            
+            grid-area: box45;
+        }
+        #container > div:nth-child(46) {            
+            grid-area: box46;
+        }
+        #container > div:nth-child(47) {            
+            grid-area: box47;
+        }
+        #container > div:nth-child(48) {            
+            grid-area: box48;
+        }
+        #container > div:nth-child(49) {            
+            grid-area: box49;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(50) {            
+            grid-area: box50;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(51) {            
+            grid-area: box51;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(52) {            
+            grid-area: box52;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(53) {            
+            grid-area: box53;
+            background-color: #F9A825;
+            border: 5px outset #F9A825;
+        }
+        #container > div:nth-child(54) {            
+            grid-area: box54;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+
+
+        #container > div:nth-child(55) {            
+            grid-area: box55;
+            background-color: #664179;
+            border: 5px outset #664179;
+        }
+        #container > div:nth-child(56) {            
+            grid-area: box56;
+            background-color: #6D669D;
+            border: 5px outset #6D669D;
+        }
+        #container > div:nth-child(57) {            
+            grid-area: box57;
+        }
+        #container > div:nth-child(58) {            
+            grid-area: box58;
+        }
+        #container > div:nth-child(59) {            
+            grid-area: box59;
+        }
+        #container > div:nth-child(60) {            
+            grid-area: box60;
+        }
+        #container > div:nth-child(61) {            
+            grid-area: box61;
+        }
+        #container > div:nth-child(62) {            
+            grid-area: box62;
+        }
+        #container > div:nth-child(63) {            
+            grid-area: box63;
+        }
+        #container > div:nth-child(64) {            
+            grid-area: box64;
+        }
+        #container > div:nth-child(65) {            
+            grid-area: box65;
+        }
+        #container > div:nth-child(66) {            
+            grid-area: box66;
+        }
+        #container > div:nth-child(67) {            
+            grid-area: box67;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(68) {            
+            grid-area: box68;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(69) {            
+            grid-area: box69;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(70) {            
+            grid-area: box70;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(71) {            
+            grid-area: box71;
+            background-color: #F9A825;
+            border: 5px outset #F9A825;
+        }
+        #container > div:nth-child(72) {            
+            grid-area: box72;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+
+
+        #container > div:nth-child(73) {            
+            grid-area: box73;
+            background-color: #664179;
+            border: 5px outset #664179;
+        }
+        #container > div:nth-child(74) {            
+            grid-area: box74;
+            background-color: #6D669D;
+            border: 5px outset #6D669D;
+        }
+        #container > div:nth-child(75) {            
+            grid-area: box75;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(76) {            
+            grid-area: box76;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(77) {            
+            grid-area: box77;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(78) {            
+            grid-area: box78;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(79) {            
+            grid-area: box79;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(80) {            
+            grid-area: box80;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(81) {            
+            grid-area: box81;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(82) {            
+            grid-area: box82;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(83) {            
+            grid-area: box83;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(84) {            
+            grid-area: box84;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(85) {            
+            grid-area: box85;
+            background-color: #3394A6;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(86) {            
+            grid-area: box86;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(87) {            
+            grid-area: box87;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(88) {            
+            grid-area: box88;
+            background-color: #BBB400;
+            border: 5px outset #BBB400;
+        }
+        #container > div:nth-child(89) {            
+            grid-area: box89;
+            background-color: #F9A825;
+            border: 5px outset #F9A825;
+        }
+        #container > div:nth-child(90) {            
+            grid-area: box90;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+
+        #container > div:nth-child(91) {            
+            grid-area: box91;
+            background-color: #664179;
+            border: 5px outset #664179;
+        }
+        #container > div:nth-child(92) {            
+            grid-area: box92;
+            background-color: #6D669D;
+            border: 5px outset #6D669D;
+        }
+        #container > div:nth-child(93) {            
+            grid-area: box93;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(94) {            
+            grid-area: box94;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(95) {            
+            grid-area: box95;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(96) {            
+            grid-area: box96;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(97) {            
+            grid-area: box97;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(98) {            
+            grid-area: box98;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(99) {            
+            grid-area: box99;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(100) {            
+            grid-area: box100;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(101) {            
+            grid-area: box101;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(102) {            
+            grid-area: box102;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(103) {            
+            grid-area: box103;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(104) {            
+            grid-area: box104;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(105) {            
+            grid-area: box105;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(106) {            
+            grid-area: box106;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(107) {            
+            grid-area: box107;
+            background-color: #F9A825;
+            border: 5px outset #F9A825;
+        }
+        #container > div:nth-child(108) {            
+            grid-area: box108;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+
+
+        #container > div:nth-child(109) {            
+            grid-area: box109;
+            background-color: #664179;
+            border: 5px outset #664179;
+        }
+        #container > div:nth-child(110) {            
+            grid-area: box110;
+            background-color: #6D669D;
+            border: 5px outset #6D669D;
+        }
+        #container > div:nth-child(111) {            
+            grid-area: box111;
+            background-color: #D36B92;
+            border: 5px outset #D36B92;
+        }
+        #container > div:nth-child(112) {            
+            grid-area: box112;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(113) {            
+            grid-area: box113;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(114) {            
+            grid-area: box114;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(115) {            
+            grid-area: box115;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(116) {            
+            grid-area: box116;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(117) {            
+            grid-area: box117;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(118) {            
+            grid-area: box118;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(119) {            
+            grid-area: box119;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(120) {            
+            grid-area: box120;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(121) {            
+            grid-area: box121;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(122) {            
+            grid-area: box122;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(123) {            
+            grid-area: box123;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(124) {            
+            grid-area: box124;
+            background-color: #388E3C;
+            border: 5px outset #388E3C;
+        }
+        #container > div:nth-child(125) {            
+            grid-area: box125;
+            background-color: #F9A825;
+            border: 5px outset #F9A825;
+        }
+        #container > div:nth-child(126) {            
+            grid-area: box126;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+
+
+        #container > div:nth-child(127) {            
+            grid-area: box127;
+            background-color: #664179;
+            border: 5px outset #664179;
+        }
+        #container > div:nth-child(128) {            
+            grid-area: box128;
+            background-color: #6D669D;
+            border: 5px outset #6D669D;
+        }
+        #container > div:nth-child(129) {            
+            grid-area: box129;
+            background-color: #E51D50;
+            border: 5px outset #E51D50;
+        }
+        #container > div:nth-child(130) {            
+            grid-area: box130;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(131) {            
+            grid-area: box131;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(132) {            
+            grid-area: box132;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(133) {            
+            grid-area: box133;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(134) {            
+            grid-area: box134;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(135) {            
+            grid-area: box135;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(136) {            
+            grid-area: box136;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(137) {            
+            grid-area: box137;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(138) {            
+            grid-area: box138;
+            background-color: #2F83CB;
+            border: 5px outset #2F83CB;
+        }
+        #container > div:nth-child(139) {            
+            grid-area: box139;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(140) {            
+            grid-area: box140;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(141) {            
+            grid-area: box141;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(142) {            
+            grid-area: box142;
+            background-color: #3394A6;
+            border: 5px outset #3394A6;
+        }
+        #container > div:nth-child(143) {            
+            grid-area: box143;
+            background-color: #F9A825;
+            border: 5px outset #F9A825;
+        }
+        #container > div:nth-child(144) {            
+            grid-area: box144;
+            background-color: #C62828;
+            border: 5px outset #C62828;
+        }
+        
+
+     </style>
+ </head>
+ <body>
+
+    <div id="container">
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div>H</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>He</div>
+
+        <div>Li</div>
+        <div>Be</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>B</div>
+        <div>C</div>
+        <div>N</div>
+        <div>O</div>
+        <div>F</div>
+        <div>Ne</div>
+
+        <div>Na</div>
+        <div>Mg</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>AL</div>
+        <div>Si</div>
+        <div>P</div>
+        <div>S</div>
+        <div>CL</div>
+        <div>Ar</div>
+
+        <div>K</div>
+        <div>Ca</div>
+        <div>Sc</div>
+        <div>Ti</div>
+        <div>V</div>
+        <div>Cr</div>
+        <div>Mn</div>
+        <div>Fe</div>
+        <div>Co</div>
+        <div>Ni</div>
+        <div>Cu</div>
+        <div>Zn</div>
+        <div>Ga</div>
+        <div>Ge</div>
+        <div>As</div>
+        <div>Se</div>
+        <div>Br</div>
+        <div>Kr</div>
+
+        <div>Rb</div>
+        <div>Sr</div>
+        <div>Y</div>
+        <div>Zr</div>
+        <div>Nb</div>
+        <div>Mo</div>
+        <div>Tc</div>
+        <div>Ru</div>
+        <div>Rh</div>
+        <div>Pd</div>
+        <div>Ag</div>
+        <div>Cd</div>
+        <div>In</div>
+        <div>Sn</div>
+        <div>Sb</div>
+        <div>Te</div>
+        <div>I</div>
+        <div>Xe</div>
+
+        <div>Cs</div>
+        <div>Ba</div>
+        <div></div>
+        <div>Hf</div>
+        <div>Ta</div>
+        <div>W</div>
+        <div>Re</div>
+        <div>Os</div>
+        <div>Ir</div>
+        <div>Pt</div>
+        <div>Au</div>
+        <div>Hg</div>
+        <div>TL</div>
+        <div>Pb</div>
+        <div>Bi</div>
+        <div>Po</div>
+        <div>At</div>
+        <div>Rn</div>
+
+        <div>Fr</div>
+        <div>Ra</div>
+        <div></div>
+        <div>Rf</div>
+        <div>Db</div>
+        <div>Sg</div>
+        <div>Bh</div>
+        <div>Hs</div>
+        <div>Mt</div>
+        <div>Ds</div>
+        <div>Rg</div>
+        <div>Cn</div>
+        <div>Uut</div>
+        <div>FL</div>
+        <div>Uup</div>
+        <div>Lv</div>
+        <div>Uus</div>
+        <div>Uuo</div>
+
+    </div>
+     
+ </body>
+ </html>

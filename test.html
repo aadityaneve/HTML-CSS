@@ -1,0 +1,309 @@
+<!-- Problem
+        Periodic Table (Selectors & Combinators) Pending
+
+        You can't use any style tags for any of the html tags and you have to use classes, ids and combinators to apply the styles, 
+        keep the usage of ids to minimal and optimise the usage of classes by using multiple classes and combinators
+
+        Use Box Model to build the layout
+
+        Create a file called periodic_table.html
+        The layout should look like the given template https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/periodic_table.jpg
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Periodic Table</title>
+     <style>
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: whitesmoke;
+            width: 1000px;
+            height: 700px;
+            margin: auto;
+
+            padding: 4%;
+
+            display: grid;
+            gap: 20px;
+            grid-template: "hydrogen    helium"
+                           ""
+                           ""
+                           ""
+                           ""
+                           ""
+                           "";
+        }
+
+        #container > div {
+            width: 50px;
+            height: 50px;
+            color: whitesmoke;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #container > div:nth-child(1) {            
+            background-color: maroon;
+            grid-area: hydrogen;
+        }
+        #container > div:nth-child(2) {
+            background-color: maroon;
+            grid-area: helium;
+        }
+        /* #container > div:nth-child(3) {
+            background-color: maroon;
+            grid-area: sodium;
+        }
+        #container > div:nth-child(4) {
+            background-color: maroon;
+            grid-area: potassium;
+        }
+        #container > div:nth-child(5) {
+            background-color: maroon;
+            grid-area: rubidium;
+        }
+        #container > div:nth-child(6) {
+            background-color: maroon;
+            grid-area: cesium;
+        }
+        #container > div:nth-child(7) {
+            background-color: maroon;
+            grid-area: francium;
+        }
+
+        #container > div:nth-child(8) {
+            grid-area: 8;
+        }
+
+        
+        #container > div:nth-child(9) {
+            background-color: darkorange;
+            grid-area: beryllium;
+        }
+        #container > div:nth-child(10) {
+            background-color: darkorange;
+            grid-area: magnesium;
+        }
+        #container > div:nth-child(11) {
+            background-color: darkorange;
+            grid-area: calcium;
+        }
+        #container > div:nth-child(12) {
+            background-color: darkorange;
+            grid-area: strontium;
+        }
+        #container > div:nth-child(13) {
+            background-color: darkorange;
+            grid-area: barium;
+        }
+        #container > div:nth-child(14) {
+            background-color: darkorange;
+            grid-area: radium;
+        }
+
+        #container > div:nth-child(15){
+            grid-area: 15;
+        }
+        #container > div:nth-child(16){
+            grid-area: 16;
+        }
+        #container > div:nth-child(17){
+            grid-area: 17;
+        }
+
+
+        #container > div:nth-child(18) {
+            background-color: blue;
+            grid-area: scandium;
+        }
+        #container > div:nth-child(19) {
+            background-color: blue;
+            grid-area: yttrlum;
+        }
+        #container > div:nth-child(20) {
+            background-color: blue;
+            grid-area: 20;
+        }
+        #container > div:nth-child(21) {
+            background-color: blue;
+            grid-area: 21;
+        }
+
+        #container > div:nth-child(22) {
+            grid-area: 22;
+        }
+        #container > div:nth-child(23) {
+            grid-area: 23;
+        }
+        #container > div:nth-child(24) {
+            grid-area: 24;
+        }
+
+
+        #container > div:nth-child(25) {
+            background-color: blue;
+            grid-area: titanium;
+        }
+        #container > div:nth-child(26) {
+            background-color: blue;
+            grid-area: zirconium;
+        }
+        #container > div:nth-child(27) {
+            background-color: blue;
+            grid-area: hafnium;
+        }
+        #container > div:nth-child(28) {
+            background-color: blue;
+            grid-area: rutherfordium;
+        } */
+        
+
+     </style>
+ </head>
+ <body>
+
+    <div id="container">
+
+        <div>H</div>
+        <div>He</div>
+        <div>Na</div>
+        <div>K</div>
+        <div>Rb</div>
+        <div>Cs</div>
+        <div>Fr</div>
+
+        <div></div>
+        <div>Be</div>
+        <div>Mg</div>
+        <div>Ca</div>
+        <div>Sr</div>
+        <div>Ba</div>
+        <div>Ra</div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Sc</div>
+        <div>Y</div>
+        <div></div>
+        <div></div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>Ti</div>
+        <div>Zr</div>
+        <div>Hf</div>
+        <div>Rf</div>
+        
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    </div>
+     
+ </body>
+ </html>

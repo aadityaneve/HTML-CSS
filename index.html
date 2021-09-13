@@ -1,0 +1,189 @@
+<!-- Problem
+Build a webpage which looks similar to the layout provided below index.html
+Use of inline styles for any of the html tags is not allowed
+Images whenever required https://via.placeholder.com/400x300
+The css should have usage of all the selectors id class type
+Use multiple classes and reuse the class selectors
+Write clean code with proper naming and indentation
+Use Flex Box model to achieve the bottom part of the desired layout
+Use Inline Block for the Scholarship Boxes
+Use px for the dimensions -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: white;
+            height: auto;
+            width: 90%;
+            margin: auto;
+        }
+
+        #container > #topPanel {
+            text-align: center;
+            padding: 3%;
+        }
+
+        #container > #topPanel > div {
+            display: inline-block;
+            height: 50px;
+            width: 25%;
+            /* border: 2px solid green; */
+        }
+
+        #container > #topPanel > #scholarshipBox1 > div, #container > #topPanel > #scholarshipBox2 > div, #container > #topPanel > #scholarshipBox3 > div {
+            display: inline-block;
+        }
+        #container > div:nth-child(1) > div:nth-child(1), #container > div:nth-child(1) > div:nth-child(2), #container > div:nth-child(1) > div:nth-child(3) {            
+            padding: 1%;
+            border-radius: 2%;
+        }
+        .backgroundColorYellow {
+            background-color: yellow;
+        }
+        .backgroundColorBlue {
+            background-color: blue;
+        }
+        .backgroundColorLightBlue {
+            background-color: lightblue;
+        }        
+        .zeroMargin {
+            margin: 0%;
+        }
+        .textAlignLeft {
+            text-align: left;
+        }
+
+
+        #middlePanel {
+            text-align: center;
+        }
+        #middlePanel > h1 {
+            color: blue;
+            font-size: 45px;
+        }
+        #middlePanel > div h4 {
+            display: inline-block;
+            text-align: center;
+            margin: 0%;
+
+            background-color: #F5F5F5;
+            padding: 1%;
+            border-radius: 3%;
+        }
+        #middlePanel > div > h4:nth-child(1) {
+            background-color: #42A5F5;
+        }
+        
+
+        #bottomPanel { 
+            display: flex;
+            background-color: white;
+            /* border: 2px solid yellow; */
+            padding: 2%;
+        }
+
+        #bottomPanel > .card {
+            height: 100%;
+            width: 30%;
+            background-color: #EEEEEE;
+
+            padding: 3%;
+
+        }
+        button {
+            background-color: whitesmoke;
+            color: #42A5F5;
+            width: 50%;
+            font-weight: 900;
+            padding: 3%;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="topPanel">
+            <div  class="textAlignLeft backgroundColorYellow" id="scholarshipBox1">
+                <img class="" src="https://via.placeholder.com/50x50" alt="image1">
+                <div class="rightPart">
+                    <h3 class="zeroMargin">Scholarship</h3>
+                    <h4 class="zeroMargin">Available</h4>
+                </div>
+            </div>
+            <div class="textAlignLeft backgroundColorBlue" id="scholarshipBox2">
+                <img class="" src="https://via.placeholder.com/50x50" alt="image1">
+                <div class="rightPart">
+                    <h3 class="zeroMargin">Scholarship</h3>
+                    <h4 class="zeroMargin">Available</h4>
+                </div>
+            </div>
+            <div class="textAlignLeft backgroundColorLightBlue" id="scholarshipBox3">
+                <img class="" src="https://via.placeholder.com/50x50" alt="image1">
+                <div class="rightPart">
+                    <h3 class="zeroMargin">Scholarship</h3>
+                    <h4 class="zeroMargin">Available</h4>
+                </div>
+            </div>
+        </div>
+
+        <div id="middlePanel">
+            <h1>Popular Program</h1>
+            <div>
+                <h4>Graduate</h4>
+                <h4>PostGraduate</h4>
+                <h4>PHD Scholarship</h4>
+                <h4>Training</h4>
+            </div>
+        </div>
+
+        <div id="bottomPanel">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="">
+                <h4>Agriculture</h4>
+                <h2>Chemical Engineering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga iusto minima, eos illum veniam facere, 
+                    amet magnam fugiat laboriosam reprehenderit velit rerum quo eveniet architecto.
+                </p>
+                <button>Apply Now</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="">
+                <h4>Agriculture</h4>
+                <h2>Mechanical Engineering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga iusto minima, eos illum veniam facere, 
+                    amet magnam fugiat laboriosam reprehenderit velit rerum quo eveniet architecto.
+                </p>
+                <button>Apply Now</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300x300" alt="">
+                <h4>Agriculture</h4>
+                <h2>Bio Engineering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga iusto minima, eos illum veniam facere, 
+                    amet magnam fugiat laboriosam reprehenderit velit rerum quo eveniet architecto.
+                </p>
+                <button>Apply Now</button>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

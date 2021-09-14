@@ -1,0 +1,331 @@
+<!-- Problem
+File hindu.html
+Layout Large https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/news_paper_lg.png
+Layout Medium https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/news_paper_md.png
+Layout Small https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/news_paper_sm.png -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hindu</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            transition-duration: 500ms;
+            box-sizing: border-box;
+        }
+
+        .mainDiv {
+            background-color: #EEEEEE;
+            height: 100%;
+            width: 90%;
+            margin: auto;
+            font-family: sans-serif;
+
+            padding: 3%;
+
+            display: grid;
+        }
+
+        @media (max-width: 600px) {
+            .mainDiv {
+                grid-template: "box1 "
+                    "box2"
+                    "box3"
+                    "box4"
+                    "box5"
+                    "box6"
+                    "box6";
+                gap: 2%;
+            }
+
+            .mainDiv>div:nth-child(1) {
+                grid-area: box1;
+            }
+
+            .mainDiv>div:nth-child(2) {
+                grid-area: box2;
+            }
+
+            .mainDiv>div:nth-child(3) {
+                grid-area: box3;
+            }
+
+            .mainDiv>div:nth-child(4) {
+                grid-area: box4;
+            }
+
+            .mainDiv>div:nth-child(5) {
+                grid-area: box5;
+            }
+
+            .mainDiv>div:nth-child(6) {
+                grid-area: box6;
+            }
+        }
+
+        @media (min-width: 600px) {
+            .mainDiv {
+                grid-template: "box1 "
+                    "box2"
+                    "box3"
+                    "box4"
+                    "box5"
+                    "box6"
+                    "box6";
+                gap: 2%;
+            }
+
+            .mainDiv>div:nth-child(1) {
+                grid-area: box1;
+            }
+
+            .mainDiv>div:nth-child(2) {
+                grid-area: box2;
+            }
+
+            .mainDiv>div:nth-child(3) {
+                grid-area: box3;
+            }
+
+            .mainDiv>div:nth-child(4) {
+                grid-area: box4;
+            }
+
+            .mainDiv>div:nth-child(5) {
+                grid-area: box5;
+            }
+
+            .mainDiv>div:nth-child(6) {
+                grid-area: box6;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mainDiv {
+                grid-template: "box1 box1"
+                    "box2 box3"
+                    "box4 box5"
+                    "box6 box6";
+                gap: 2%;
+            }
+
+            .mainDiv>div:nth-child(1) {
+                grid-area: box1;
+            }
+
+            .mainDiv>div:nth-child(2) {
+                grid-area: box2;
+            }
+
+            .mainDiv>div:nth-child(3) {
+                grid-area: box3;
+            }
+
+            .mainDiv>div:nth-child(4) {
+                grid-area: box4;
+            }
+
+            .mainDiv>div:nth-child(5) {
+                grid-area: box5;
+            }
+
+            .mainDiv>div:nth-child(6) {
+                grid-area: box6;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .mainDiv {
+                grid-template-rows: auto auto auto auto;
+                grid-template-columns: auto auto auto auto;
+                gap: 2%;
+            }
+
+            .mainDiv>div:nth-child(1) {
+                grid-row-start: 1;
+                grid-row-end: 4;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            .mainDiv>div:nth-child(2) {
+                grid-row-start: 4;
+                grid-row-end: 5;
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            .mainDiv>div:nth-child(3) {
+                grid-row-start: 1;
+                grid-row-end: 3;
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+
+            .mainDiv>div:nth-child(4) {
+                grid-row-start: 2;
+                grid-row-end: 4;
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+
+            .mainDiv>div:nth-child(5) {
+                grid-row-start: 3;
+                grid-row-end: 5;
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+
+            .mainDiv>div:nth-child(6) {
+                grid-row-start: 4;
+                grid-row-end: 5;
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+        }
+
+
+        .bigCard {
+            height: 100%;
+            width: 100%;
+            padding: 1%;
+            background-color: #3949AB;
+            color: white;
+            font-size: 14px;
+
+            grid-area: bigcard;
+
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            display: grid;
+            gap: 2%;
+            grid-template: "bigCardImg"
+                "bigCardInfo";
+        }
+
+        .bigCardImg {
+            height: 100%;
+            width: 100%;
+
+            grid-area: bigCardImg;
+        }
+
+        .bigCardInfo {
+            width: 100%;
+            padding: 1%;
+
+            grid-area: bigCardInfo;
+        }
+
+
+
+
+        .smallCard {
+            height: 150px;
+            width: 100%;
+            padding: 1%;
+            background-color: white;
+
+            grid-area: smallcard;
+
+            display: grid;
+            grid-template: "smallCardImg smallCardInfo smallCardInfo smallCardInfo"
+                "smallCardImg smallCardInfo smallCardInfo smallCardInfo";
+            gap: 2%;
+        }
+
+        .smallCardImg {
+            width: 150px;
+
+            grid-area: smallCardImg;
+        }
+
+        .smallCardInfo {
+            width: 100%;
+            text-align: left;
+
+            grid-area: smallCardInfo;
+        }
+
+
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv">
+
+
+        <div class="bigCard">
+            <img class="bigCardImg"
+                src="https://th.thgim.com/news/national/fwrz7q/article30897008.ece/ALTERNATES/FREE_660/TH24Trump-visit1"
+                alt="Ahmedabad joint rally with Trump">
+            <div class="bigCardInfo">
+                <h2>Ahmedabad joint rally with Trumph will be historic, says Modi</h2>
+                <h4>KALLOL BHATTACHERJEE SUHASINI HAIDAR</h4>
+                <p>U.S President to visit Sabarmati Ashram ahead of 'Namaste Trump' event</p>
+            </div>
+        </div>
+        <div class="smallCard">
+            <img class="smallCardImg"
+                src="https://th.thgim.com/news/national/pk9een/article30897042.ece/ALTERNATES/FREE_660/TH24GUJSTADIUM"
+                alt="Ahmedabad glitters to Welcome Donald Trump">
+            <div class="smallCardInfo">
+                <h3 class="">NATIONAL</h3>
+                <p class="">Ahmedabad glitters to Welcome Donald Trump Welcome Donald</p>
+            </div>
+        </div>
+
+
+
+        <div class="smallCard">
+            <img class="smallCardImg"
+                src="https://th.thgim.com/the-huddle/41kx3p/article30895692.ece/ALTERNATES/FREE_660/23THRANIL1"
+                alt="THE HUDDLE">
+            <div class="smallCardInfo">
+                <h3>THE HUDDLE</h3>
+                <p>The Huddle 2020 | Regional integration pegged to SAARC revival, says Ranil Wickremesinghe</p>
+            </div>
+        </div>
+        <div class="smallCard">
+            <img class="smallCardImg"
+                src="https://www.thehindu.com/news/national/s9xcef/article30896383.ece/ALTERNATES/LANDSCAPE_615/23THLTKASHMIRCLASSROOM"
+                alt="NATIONAL">
+            <div class="smallCardInfo">
+                <h3>NATIONAL</h3>
+                <p>Over 10 lakh Kashmir students to don school uniforms after seven months</p>
+            </div>
+        </div>
+        <div class="smallCard">
+            <img class="smallCardImg"
+                src="https://aniportalimages.s3.amazonaws.com/media/details/raveesh_kumar_feb23.JPG" alt="NATIONAL">
+            <div class="smallCardInfo">
+                <h3>NATIONAL</h3>
+                <p>Some restrictions imposed on export of medical equipment to China, says MEA</p>
+            </div>
+        </div>
+        <div class="smallCard">
+            <img class="smallCardImg"
+                src="https://www.thehindu.com/the-huddle/fxfx2e/article30896395.ece/ALTERNATES/LANDSCAPE_1200/TH24MPS"
+                alt="THE HUDDLE">
+            <div class="smallCardInfo">
+                <h3>THE HUDDLE</h3>
+                <p>Only a "a microscopic minority" protesting against CAA: Tejaswi Surya</p>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!-- Problem
+Use media queries and grid-template to achieve the given layout
+Filename layout_4.html
+Write code that will look like the below provided templates
+Large Screen https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/layout_4_large.png
+Medium Screen https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/layout_4_medium.png
+Small Screen https://masai-course.s3.ap-south-1.amazonaws.com/resources/templates/css/media/layout_4_small.png -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #container {
+            background-color: whitesmoke;
+                width: 70%;
+                height: 100%;
+                padding: 6%;
+                margin: auto;
+
+                font-family: 'Courier New', Courier, monospace;
+
+                transition-duration: 500ms;
+
+                display: grid;
+                gap: 4%;
+        }
+
+        @media (max-width: 600px) {
+
+            #container {            
+                gap: 1%;
+                grid-template: "nav "
+                    "box1"
+                    "box4"
+                    "box2"
+                    "box3";
+            }
+
+            #container>div:nth-child(1) {
+                grid-area: nav;
+                background-color: yellow;
+            }
+
+            #container>div:nth-child(2) {
+                grid-area: box1;
+                background-color: red;
+
+                width: 100%;
+                height: 100px;
+            }
+
+            #container>div:nth-child(3) {
+                grid-area: box2;
+                background-color: greenyellow;
+
+                width: 100%;
+                height: 100px;
+            }
+
+            #container>div:nth-child(4) {
+                grid-area: box3;
+                background-color: blue;
+
+                width: 100%;
+                height: 100px;
+            }
+
+            #container>div:nth-child(5) {
+                grid-area: box4;
+                background-color: gray;
+
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        @media (min-width: 600px) {
+
+            #container {               
+                gap: 1%;
+                grid-template: "nav "
+                    "box1"
+                    "box4"
+                    "box2"
+                    "box3";
+            }
+
+            #container>div:nth-child(1) {
+                grid-area: nav;
+                background-color: yellow;
+            }
+
+            #container>div:nth-child(2) {
+                grid-area: box1;
+                background-color: red;
+
+                width: 100%;
+                height: 100px;
+            }
+
+            #container>div:nth-child(3) {
+                grid-area: box2;
+                background-color: greenyellow;
+
+                width: 100%;
+                height: 100px;
+            }
+
+            #container>div:nth-child(4) {
+                grid-area: box3;
+                background-color: blue;
+
+                width: 100%;
+                height: 100px;
+            }
+
+            #container>div:nth-child(5) {
+                grid-area: box4;
+                background-color: gray;
+
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+
+        @media (min-width: 768px) {
+
+            #container {               
+                gap: 3%;
+                grid-template: "nav nav"
+                    "box1 box2"
+                    "box3 box4";
+            }
+
+            #container>div:nth-child(1) {
+                grid-area: nav;
+                background-color: yellow;
+            }
+
+            #container>div:nth-child(2) {
+                grid-area: box1;
+                background-color: red;
+
+                width: 100%;
+                height: 250px;
+            }
+
+            #container>div:nth-child(3) {
+                grid-area: box2;
+                background-color: greenyellow;
+
+                width: 100%;
+                height: 250px;
+            }
+
+            #container>div:nth-child(4) {
+                grid-area: box3;
+                background-color: blue;
+
+                width: 100%;
+                height: 250px;
+            }
+
+            #container>div:nth-child(5) {
+                grid-area: box4;
+                background-color: gray;
+
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+
+        @media (min-width: 1024px) {
+
+            #container {
+                gap: 1%;
+                grid-template: "nav nav nav nav"
+                    "box1 box2 box3 box4";
+            }
+
+            #container>div:nth-child(1) {
+                grid-area: nav;
+                background-color: yellow;
+            }
+
+            #container>div:nth-child(2) {
+                grid-area: box1;
+                background-color: red;
+
+                width: 100%;
+                height: 200px;
+            }
+
+            #container>div:nth-child(3) {
+                grid-area: box2;
+                background-color: greenyellow;
+
+                width: 100%;
+                height: 200px;
+            }
+
+            #container>div:nth-child(4) {
+                grid-area: box3;
+                background-color: blue;
+
+                width: 100%;
+                height: 200px;
+            }
+
+            #container>div:nth-child(5) {
+                grid-area: box4;
+                background-color: gray;
+
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <div>
+            <h1>Navigation</h1>
+        </div>
+        <div>
+            <h3>Box 1</h3>
+        </div>
+        <div>
+            <h3>Box 2</h3>
+        </div>
+        <div>
+            <h3>Box 3</h3>
+        </div>
+        <div>
+            <h3>Box 4</h3>
+        </div>
+    </div>
+
+</body>
+
+</html>
